@@ -14,7 +14,7 @@ python -m pytest -q
 
 The included Iris dataset has 150 measured flowers (sepal length/width, petal length/width) and three species labels. The program:
 
-1. Makes an **80/20-ish (75/25) stratified split**: 112 training examples and 38 held-out examples.
+1. Makes a **75/25 stratified split**: 112 training examples and 38 held-out examples.
 2. Fits a **DummyClassifier** that always predicts the most common training species (the simple baseline).
 3. Fits a **LogisticRegression** model with StandardScaler in a single Pipeline. The scaler is fitted only on training data, preventing test leakage.
 4. Evaluates once on the holdout test set and reports accuracy and a confusion matrix.
